@@ -17,6 +17,8 @@ defmodule HadesLVWeb.Router do
   scope "/", HadesLVWeb do
     pipe_through :browser
 
+    live "first", First.FirstLive, :index
+
     get "/", PageController, :home
   end
 

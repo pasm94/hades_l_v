@@ -1,0 +1,12 @@
+<%= @total %>
+
+<form phx-submit="save">
+  <input type="text" name="component" />
+  <button>Inc component</button>
+</form>
+
+<ul>
+  <%= for value <- @component_value do %>
+    <.live_component module={IncComponent} id={"inc-" <> Integer.to_string(value)} value={value} />
+  <% end %>
+</ul>
