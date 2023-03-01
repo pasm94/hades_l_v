@@ -19,6 +19,7 @@ defmodule HadesLVWeb.Router do
 
     live "first", First.FirstLive, :index
 
+    get "/tailwind", PageController, :tailwind
     get "/", PageController, :home
   end
 
